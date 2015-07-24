@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>573</width>
+    <width>755</width>
     <height>342</height>
    </rect>
   </property>
@@ -31,7 +31,7 @@
     </widget>
    </item>
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,1">
+    <layout class="QHBoxLayout" name="horizontalLayout" stretch="5,9">
      <item>
       <layout class="QVBoxLayout" name="verticalLayout_2">
        <item>
@@ -122,7 +122,7 @@
                <string>Your current balance</string>
               </property>
               <property name="text">
-               <string notr="true">0 LTC</string>
+               <string notr="true">0 CDN</string>
               </property>
               <property name="textInteractionFlags">
                <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -151,7 +151,7 @@
                <string>Total of transactions that have yet to be confirmed, and do not yet count toward the current balance</string>
               </property>
               <property name="text">
-               <string notr="true">0 LTC</string>
+               <string notr="true">0 CDN</string>
               </property>
               <property name="textInteractionFlags">
                <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -177,7 +177,7 @@
                <string>Mined balance that has not yet matured</string>
               </property>
               <property name="text">
-               <string notr="true">0 LTC</string>
+               <string notr="true">0 CDN</string>
               </property>
               <property name="textInteractionFlags">
                <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -208,6 +208,12 @@
       <layout class="QVBoxLayout" name="verticalLayout_3">
        <item>
         <widget class="QFrame" name="frame_2">
+         <property name="minimumSize">
+          <size>
+           <width>480</width>
+           <height>0</height>
+          </size>
+         </property>
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
          </property>

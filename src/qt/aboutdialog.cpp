@@ -6,7 +6,9 @@
 
 // Copyright year (2009-this)
 // Todo: update this when changing our copyright comments in the source
-const int ABOUTDIALOG_COPYRIGHT_YEAR = 2013;
+const int BITCOIN_COPYRIGHT_YEAR = 2014;
+const int LITECOIN_COPYRIGHT_YEAR = 2013;
+const int CANADAECOIN_COPYRIGHT_YEAR = 2015;
 
 AboutDialog::AboutDialog(QWidget *parent) :
     QDialog(parent),
@@ -15,13 +17,10 @@ AboutDialog::AboutDialog(QWidget *parent) :
     ui->setupUi(this);
 
     // Set current copyright year
-    ui->copyrightLabel->setText(tr("Copyright") +
-               QString(" &copy; 2009-%1 ").arg(COPYRIGHT_YEAR) +
-               tr("The Bitcoin developers") + QString("<br>") +
-               tr("Copyright") + QString(" &copy; ") +
-               tr("2011-%1 The Litecoin developers").arg(ABOUTDIALOG_COPYRIGHT_YEAR) + QString("<br>") +
-               tr("Copyright") + QString(" &copy; ") +
-               tr("2014 The Canada eCoin developers"));
+    ui->copyrightLabel->setText(tr("Copyright") + QString(" &copy; ") +
+               QString("2009-%1 The Bitcoin developers ").arg(BITCOIN_COPYRIGHT_YEAR) + tr("") + QString("<br>") + tr("Copyright") + QString(" &copy; ") +
+               tr("2011-%1 The Litecoin developers").arg(LITECOIN_COPYRIGHT_YEAR) + QString("<br>") + tr("Copyright") + QString(" &copy; ") +
+               tr("2014--%1 The Canada eCoin developers").arg(CANADAECOIN_COPYRIGHT_YEAR));
 }
 
 void AboutDialog::setModel(ClientModel *model)

@@ -56,10 +56,8 @@ ExplorerPage::ExplorerPage(QWidget *parent) :
     walletModel(0),
     explorerdelegate(new ExplorerViewDelegate())
 {
-    ui->setupUi(this);
-    
+    ui->setupUi(this);    
     nam = new QNetworkAccessManager(this);
-    ui->textBrowser->setHidden(true);
     connect(nam,SIGNAL(finished(QNetworkReply*)),this,SLOT(finished(QNetworkReply*)));
     connect(ui->submitButton,SIGNAL(clicked()),this,SLOT(DoHttpGet()));
 }
@@ -83,7 +81,6 @@ void ExplorerPage::setWalletModel(WalletModel *model)
 }
 
 void ExplorerPage::finished(QNetworkReply *reply) {
-  ui->textBrowser->setHidden(false);
   if(reply->error() == QNetworkReply::NoError) {
     ui->textBrowser->setText(reply->readAll());
   } else {
@@ -92,13 +89,29 @@ void ExplorerPage::finished(QNetworkReply *reply) {
 }
 
 void ExplorerPage::DoHttpGet() {
-  QString url = "http://exp.canadaecoin.ca/explore.php?b=";
+  QString urltn = "http://qt.canadaecoin.net/v1.0.0.1/txn.php?";
+  QString urlti = "http://qt.canadaecoin.net/v1.0.0.1/txi.php?";
+  QString urla = "http://qt.canadaecoin.net/v1.0.0.1/addr.php?";
+  QString urlb = "http://qt.canadaecoin.net/v1.0.0.1/block.php?";
+  QString urle = "http://qt.canadaecoin.net/v1.0.0.1/error.php";
   QString data = ui->dataLine->text();
-  QString final = url + data;
+  QString final;
+  int size = data.size();
+  if(size == 64){
+      final = urltxn + data;
+  } else if(size == 68){
+      final = urltxi + data;
+  } else if(size == 34){
+      final = urla + data;
+  } else if(size >= 7){
+      final = urlb + data;
+  }else {
+      final = urle;
+  }
   QNetworkRequest req;
   QByteArray postData;
-  postData.append(data.toAscii());
+  postData.append(data.toLocal8Bit());
   req.setUrl(QUrl(final));
-  req.setRawHeader("User-Agent", "CanadaeCoin Linux");
+  req.setRawHeader("User-Agent", "CanadaeCoin QT v1.0.0.1");
   nam->get(req);
 }
