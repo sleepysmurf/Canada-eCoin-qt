@@ -89,8 +89,8 @@ void ExplorerPage::finished(QNetworkReply *reply) {
 }
 
 void ExplorerPage::DoHttpGet() {
-  QString urltn = "http://qt.canadaecoin.net/v1.0.0.1/txn.php?";
-  QString urlti = "http://qt.canadaecoin.net/v1.0.0.1/txi.php?";
+  QString urltxn = "http://qt.canadaecoin.net/v1.0.0.1/txn.php?";
+  QString urltxi = "http://qt.canadaecoin.net/v1.0.0.1/txi.php?";
   QString urla = "http://qt.canadaecoin.net/v1.0.0.1/addr.php?";
   QString urlb = "http://qt.canadaecoin.net/v1.0.0.1/block.php?";
   QString urle = "http://qt.canadaecoin.net/v1.0.0.1/error.php";
