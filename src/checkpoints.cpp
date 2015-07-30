@@ -37,11 +37,11 @@ namespace Checkpoints
         boost::assign::map_list_of
         (       0, uint256("0x863626dadaef221e2e2f30ff3dacae44cabdae9e0028058072181b3fb675d94a"))
         (    1024, uint256("0xeca0b8fb242d1439c7a73fd1f317a1ecfc06401e5fd63e1e1a4c055c55824669"))
-        (  107940, uint256("0xdb113617a4d312ba2e031d21fc115d34c93a5fe6b022bb0ef192cdb81dca682f"))
+        (  107940, uint256("0x13d8293e1ce37a1b60c28839c227bb34e0fa17a69bd5433004831a9f0136988d"))
         (  114468, uint256("0x25510465b906a522f5de1fb65bfa8ed6873dfafd8a0bd378b07c4965c089c095"))
         ( 1298591, uint256("0x61bc5f766af802b61cc2f1cb6dfde16a0a6792bdca6f53e5eedfaaa3fc831b9b"))
         ( 1298724, uint256("0xda722f8a9e9dc983cab05d9a7509391550e08c3be6b8a32be5c6b93b5b821ff8"))
-            ;
+    ;
     static const CCheckpointData data = {
         &mapCheckpoints,
         1438216338, // * UNIX timestamp of last checkpoint block
