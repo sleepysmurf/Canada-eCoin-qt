@@ -19,8 +19,10 @@ using namespace std;
 map<uint256, CAlert> mapAlerts;
 CCriticalSection cs_mapAlerts;
 
-static const char* pszMainKey = "040184710fa689ad5023690c80f3a49c8f13f8d45b8c857fbcbc8bc4a8e4d3eb4b10f4d4604fa08dce601aaf0f470216fe1b51850b4acf21b179c45070ac7b03a9";
-static const char* pszTestKey = "04302390343f91cc401d56d68b123028bf52e5fca1939df127f63c6467cdf9c8e2c14b61104cf817d0b780da337893ecc4aaff1309e536162dabbdb45200ca2b0a";
+    // Starting with Canada eCoin Core v0.8.6.1, the vAlertPubKey ECDSA (Ecliptical Curve DSA) hex value will be as follows
+static const char* pszMainKey = "0440b844218fc98c88af4aa37eccd971dfe65d5688431eaa7c582b7c350409c2ece9514e955547edea2d56fc996ebffaab6003346bd59747360e2b6e7ea56f0f01";
+static const char* pszTestKey = "049fb444b3d7439b92906b659e3588ed80d0ebcecb7b36dce44cdc6cd5ae06c12520e065bdc259a6d4a6332dd8d5a2acf8dbffc0e10d7cc0b8d1b1105cf40931d4";
+    // As of 08/23/2015 the current holders of the private keys are: Koad, Leviticus and Hexdump; testnet key available upon request.
 
 void CUnsignedAlert::SetNull()
 {
