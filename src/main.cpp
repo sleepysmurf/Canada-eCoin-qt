@@ -1090,9 +1090,9 @@ int64 static GetBlockValue(int nHeight, int64 nFees)
     return nSubsidy + nFees;
 }
 
-static const int64 nTargetTimespan = 1 * 24 * 60 * 60; // Canada eCoin: adjust once per day
-static const int64 nTargetSpacing = 30; // Canada eCoin: 30 second blocks
-static const int64 nInterval = nTargetTimespan / nTargetSpacing;
+static int64 nTargetTimespan = 1 * 24 * 60 * 60; // Canada eCoin: adjust once per day
+static int64 nTargetSpacing = 30; // Canada eCoin: 30 second blocks
+static int64 nInterval = nTargetTimespan / nTargetSpacing;
 
 //
 // minimum amount of work that could possibly be required nTime after
@@ -1133,8 +1133,11 @@ unsigned int static GetNextWorkRequired(const CBlockIndex* pindexLast, const CBl
         // Special difficulty rule for testnet:
         if (fTestNet)
         {
+            /*Disable special rules for testnet to test new rules for mainnet
+
             // If the new block's timestamp is more than 2* 10 minutes
             // then allow mining of a min-difficulty block.
+
             if (pblock->nTime > pindexLast->nTime + nTargetSpacing*2)
                 return nProofOfWorkLimit;
             else
@@ -1144,7 +1147,7 @@ unsigned int static GetNextWorkRequired(const CBlockIndex* pindexLast, const CBl
                 while (pindex->pprev && pindex->nHeight % nInterval != 0 && pindex->nBits == nProofOfWorkLimit)
                     pindex = pindex->pprev;
                 return pindex->nBits;
-            }
+            }  */
         }
 
         return pindexLast->nBits;
