@@ -1,5 +1,10 @@
-Canada eCoin
+Canada eCoin - Original++ Branch
 ================================
+
+this branch 'original++' is the core CDN code forked from ThisIsOurCoin/canadaecoin with some minor changes.
+* some UI tweeks
+* testnet launched
+
 
 Copyright (c) 2009-2013 Bitcoin Developers  
 Copyright (c) 2011-2013 Litecoin Developers  
