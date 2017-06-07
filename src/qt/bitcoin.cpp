@@ -146,7 +146,7 @@ int main(int argc, char *argv[])
     {
         // This message can not be translated, as translation is not initialized yet
         // (which not yet possible because lang=XX can be overridden in bitcoin.conf in the data directory)
-        QMessageBox::critical(0, "Canada eCoin",
+        QMessageBox::critical(0, "Canada eCoin Core",
                               QString("Error: Specified data directory \"%1\" does not exist.").arg(QString::fromStdString(mapArgs["-datadir"])));
         return 1;
     }
@@ -155,11 +155,11 @@ int main(int argc, char *argv[])
     // Application identification (must be set before OptionsModel is initialized,
     // as it is used to locate QSettings)
     QApplication::setOrganizationName("Canada eCoin");
-    QApplication::setOrganizationDomain("canadaecoin.org");
+    QApplication::setOrganizationDomain("canadaecoin.ca");
     if(GetBoolArg("-testnet")) // Separate UI settings for testnet
-        QApplication::setApplicationName("Canada eCoin-Qt-testnet");
+        QApplication::setApplicationName("Canada eCoin Core-testnet");
     else
-        QApplication::setApplicationName("Canada eCoin-Qt");
+        QApplication::setApplicationName("Canada eCoin Core");
 
     // ... then GUI settings:
     OptionsModel optionsModel;

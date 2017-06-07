@@ -1,6 +1,6 @@
 TEMPLATE = app
-TARGET = Canada-eCoin-qt
-macx:TARGET = "Canada-eCoin-Qt"
+TARGET = Canada-eCoin-Core
+macx:TARGET = "Canada eCoin Core"
 VERSION = 1.0.0.0
 INCLUDEPATH += src src/json src/qt
 QT += core gui network
@@ -68,6 +68,15 @@ contains(USE_UPNP, -) {
     message(Building without UPNP support)
 } else {
     message(Building with UPNP support)
+
+    isEmpty(MINIUPNPC_INCLUDE_PATH) {
+        macx:MINIUPNPC_INCLUDE_PATH = /usr/local/opt/miniupnpc/include
+    }
+
+    isEmpty(MINIUPNPC_LIB_PATH) {
+        macx:MINIUPNPC_LIB_PATH = /usr/local/opt/miniupnpc/lib
+    }
+
     count(USE_UPNP, 0) {
         USE_UPNP=1
     }

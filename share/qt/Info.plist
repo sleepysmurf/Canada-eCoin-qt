@@ -7,7 +7,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleGetInfoString</key>
-	<string>$VERSION, Copyright © 2009-$YEAR The Bitcoin developers</string>
+	<string>$VERSION, Copyright © 2009-$YEAR The Canada eCoin developers</string>
 	<key>CFBundleShortVersionString</key>
 	<string>$VERSION</string>
 	<key>CFBundleVersion</key>
@@ -15,16 +15,16 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleExecutable</key>
-	<string>Canada eCoin-Qt</string>
+	<string>Canada eCoin Core</string>
 	<key>CFBundleIdentifier</key>
-	<string>org.canadaecoin.Canada eCoin-Qt</string>
+	<string>org.canadaecoin.core</string>
         <key>CFBundleURLTypes</key>
         <array>
           <dict>
             <key>CFBundleTypeRole</key>
             <string>Editor</string>
             <key>CFBundleURLName</key>
-            <string>org.canadaecoin.Canada eCoinPayment</string>
+            <string>org.canadaecoin.Canada eCoin Payment</string>
             <key>CFBundleURLSchemes</key>
             <array>
               <string>canadaecoin</string>

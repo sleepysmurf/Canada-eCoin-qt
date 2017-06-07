@@ -9,7 +9,7 @@ from datetime import date
 bitcoinDir = "./";
 
 inFile     = bitcoinDir+"/share/qt/Info.plist"
-outFile    = "Canada eCoin-Qt.app/Contents/Info.plist"
+outFile    = "Canada eCoin Core.app/Contents/Info.plist"
 version    = "unknown";
 
 fileForGrabbingVersion = bitcoinDir+"bitcoin-qt.pro"
