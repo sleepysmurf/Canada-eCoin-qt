@@ -3,13 +3,14 @@ Canada eCoin
 
 Copyright (c) 2009-2013 Bitcoin Developers  
 Copyright (c) 2011-2013 Litecoin Developers  
-Copyright (c) 2014 Canada eCoin Developers  
+Copyright (c) 2014 -2018 Canada eCoin Developers  
 
 What is Canada eCoin?
 ----------------
 
 A scrypt-based crypto currency that supports merged mining (as per USC code base).  
 
+Ticker:CDN
 Total coins: 100,000,000  
 Block time: 30 seconds  
 Block maturity/confirmations: 100  
