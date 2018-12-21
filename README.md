@@ -10,11 +10,12 @@ What is Canada eCoin?
 
 A scrypt-based crypto currency that supports merged mining (as per USC code base).  
 
-Ticker CDN
+Ticker: CDN
+
 Total coins: 100,000,000  
 Block time: 30 seconds  
 Block maturity/confirmations: 100  
-Diff re-target: once daily  
+Diff re-target: once daily
 
 Blocks 0-500: 25 eCoins  
 Blocks 501-1000: 50 eCoins  
